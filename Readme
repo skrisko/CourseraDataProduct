@@ -1,1 +1,4 @@
 This repository contain the work for the course on coursera, Data Product
+
+In the Folder Shiny App you will fine a ui.R file with the code for the interface, and a server.R file for the
+communication and the reactivity of the App
