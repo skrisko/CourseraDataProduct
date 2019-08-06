@@ -1,0 +1,46 @@
+Presentation Coursera Data Product Project 2
+========================================================
+author: Skrisko
+date: 6 August 2019
+autosize: true
+
+Presentation of the application
+========================================================
+
+During this Project I choose to work on the mtcars dataset.This data set is a classical that we have seen many time during the course. It give different information on a car like miles per gallon, horsepower, weight...
+
+The aim of the App is to allow the user to do some Exploratory analysis with the data set mtcars. 
+
+You can choose several thing
+- What is the X axis
+- What is the Y axis
+- What is the color
+- How many data to display
+
+Overview of the data set
+========================================================
+
+An exemple of the data set
+
+```{r}
+summary(cars)
+```
+
+Other possibilities
+========================================================
+
+Once you have do your first step, you can choose to add a linear regression with a check box: Smmoth 
+
+Regression is done between the x and y variables. You can choose both so you can run a regression between all the variable. 
+
+========================================================
+This last slide is an example of the plot you can make with the shiny app.
+
+```{r}
+library(ggplot2)
+p <- ggplot(data = mtcars , aes(x=mpg, y=wt)) + geom_point()
+        p <- p + ggtitle("Example of plot you can make") + xlab("Miles per gallon") + ylab("Weight")
+        p <- p + aes(color=mtcars$cyl)
+        p <- p + geom_smooth()
+print(p)
+```
